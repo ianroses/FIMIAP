@@ -1,0 +1,23 @@
+1,CU05 Registrar beneficiaria
+2,CU06 Modificar beneficiaria
+3,CU07 Eliminar beneficiaria
+4,CU08 Registrar trabajador
+5,CU09 Modificar trabajador
+6,CU10 Eliminar trabajador
+7,CU11 Agregar noticia
+8,CU12 Modificar noticia
+9,CU13 Eliminar noticia
+10,CU14 Consultar perfil
+11,CU15 Modificar perfil
+12,CU16 Cambiar contraseña
+13,CU17 Modificar información pública
+14,CU18 Agregar imagen
+15,CU19 Eliminar imagen
+16,CU20 Consultar lista de beneficiarias
+17,CU21 Consultar lista de trabajadores
+18,CU22 Consultar donaciones registradas
+19,CU23 Otorgar permisos
+20,CU24 Retirar permisos
+21,CU25 Crear usuario
+22,CU26 Modificar usuario
+23,CU27 Eliminar usuario

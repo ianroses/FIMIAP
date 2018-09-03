@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <!--- BOOTSTRAP PARA GALERÍA ----->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        
+
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Raleway:600" rel="stylesheet">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+      <title>FIM I.A.P.</title>
+      <!-- CSS  ICONS-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- CSS  paralax-->
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+       <!-- CSS sidebar Admin -->
+       <link href="css/sidebarAdmin.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+       <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <link href="sidebar.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      
+      <!-- Compiled and minified JavaScript -->
+      <script src="js/materialize.min.js"></script>
+      <link href="css/stylesFIM.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="js/materialize.js"></script>
+      <script src="js/sidebarAdmin.js"></script>
+      <script src="js/init.js"></script>
+      <script src="js/maps.js"></script>
+       <script src="sidebar.js"></script>
+      <!-- Latest compiled and minified JavaScript Bootstrap -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <!-- API mapas  -->
+        <script async defer src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJvxu47NVa04URnFOA4xyaLVM&key=AIzaSyBIRYnSEoPejEaEUh9RNxmRnqq6fBXXQWU"></script>
+   </head>
+   
+   
+   <body>
+      <div class="navbar-fixed">
+         <nav class="pinkFim lighten" role="navigation">
+            <div class="nav-wrapper container">
+               <a id="logo-container" href="#" class="brand-logo white-text">FIM</a>
+               <ul class="right hide-on-med-and-down white-text">
+                  <li class="<?php if ($selected == 'index') echo ' active'; ?>"><a href="index.php" class="waves-effect waves-light white-text">Inicio</a></li>
+                  <li class="<?php if ($selected == 'nosotros') echo ' active'; ?>"><a href="nosotros.php" class="waves-effect waves-light white-text">Nosotros</a></li>
+                  <li class="<?php if ($selected == 'programas') echo ' active'; ?>"><a href="programas.php" class="waves-effect waves-light white-text">Programas</a></li>
+                  <li class="<?php if ($selected == 'galeria') echo ' active'; ?>"><a href="galeria.php" class="waves-effect waves-light white-text">Galería</a></li>
+                  <li class="<?php if ($selected == 'noticias') echo ' active'; ?>"><a href="noticias.php" class="waves-effect waves-light white-text">Noticias</a></li>
+                  <li class="<?php if ($selected == 'donar') echo ' active'; ?>"><a href="donar.php" class="waves-effect waves-light white-text">Donar</a></li>
+                  <li class="<?php if ($selected == 'contacto') echo ' active'; ?>"><a href="contacto.php" class="waves-effect waves-light white-text">Contacto</a></li>
+                  <li class="<?php if ($selected == 'admin') echo ' active'; ?>"><a href="admin.php" class="waves-effect waves-light white-text">Admin</a></li>
+               </ul>
+               <ul id="nav-mobile" class="side-nav fim-z">
+                  <li class="<?php if ($selected == 'index') echo ' active'; ?>"><a href="index.php" class="waves-effect blueFim-text"><i class="material-icons right pinkFim-text lighten-2">business</i>Inicio</a></li>
+                  <li class="<?php if ($selected == 'nosotros') echo ' active'; ?>"><a href="nosotros.php" class="waves-effect blueFim-text"><i class="material-icons right pinkFim-text lighten-2">info</i>Nosotros</a></li>
+                  <li class="<?php if ($selected == 'programas') echo ' active'; ?>"><a href="programas.php" class="waves-effect blueFim-text"><i class="material-icons right pinkFim-text lighten-2">class</i>Programas</a></li>
+                  <li class="<?php if ($selected == 'galeria') echo ' active'; ?>"><a href="galeria.php" class="waves-effect blueFim-text"><i class="material-icons right pinkFim-text lighten-2">view_carousel</i>Galería</a></li>
+                  <li class="<?php if ($selected == 'noticias') echo ' active'; ?>"><a href="noticias.php" class="waves-effect blueFim-text"><i class="material-icons right pinkFim-text lighten-2">new_releases</i>Noticias</a></li>
+                  <li class="<?php if ($selected == 'donar') echo ' active'; ?>"><a href="donar.php" class="waves-effect blueFim-text"><i class="material-icons right pinkFim-text lighten-2">payment</i>Donar</a></li>
+                  <li class="<?php if ($selected == 'contacto') echo ' active'; ?>"><a href="contacto.php" class="waves-effect blueFim-text"><i class="material-icons right pinkFim-text lighten-2">contacts</i>Contacto</a></li>
+                  <li class="<?php if ($selected == 'admin') echo ' active'; ?>"><a href="admin.php" class="waves-effect blueFim-text"><i class="material-icons right pinkFim-text lighten-2">lock</i>Admin</a></li>
+               </ul>
+               <a href="#" data-activates="nav-mobile" class="white-text button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+         </nav>
+      </div>

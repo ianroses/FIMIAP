@@ -1,0 +1,111 @@
+<!--nombre, estatus, perfil completo, fecha ingreso-->
+
+<!-- starts content  -->
+    <div class="content administrativo"> 
+        <div class="administrativo">
+            <form class="col s12" action="consulta_lista.php" method="POST" enctype="multipart/form-data" >
+            <div class="row">
+                <div class="col s6">
+                <h4><strong> Beneficiarias </strong></h4>
+                </div>
+                <div class="col s6">
+                <br>
+                <button class="btn right waves-effect waves-light blueFim white-text enviar_y_guardar" type="submit" name="btnSend" id="btnSend" >Lista
+            		<i class="material-icons right">send</i>
+            	</button>
+            	</div>
+        	</div>
+        	</form>
+        </div>
+        <div><br><br></div>
+        
+        <fieldset>
+            <div class="administrativo">
+                <h5><strong> Consulta </strong></h5>
+            </div>
+            
+            <div class="row">
+                <form class="col s12" action="consulta_alumna.php" method="POST" enctype="multipart/form-data" >
+             
+                    <div class="row">
+                        <div class="input-field col s6">
+                             <input id="first_name" name="first_name" type="text" class="validate"  >
+                            <label for="first_name">Nombre(s)</label>
+                        </div>
+                        <div class="input-field col s6">
+                             <input id="last_name" name="last_name" type="text" class="validate"  >
+                            <label for="last_name">Apellido(s)</label>
+                        </div>
+                    </div>
+
+                    <div class="row col s12 ">
+					    <button class="btn right waves-effect waves-light blueFim white-text enviar_y_guardar" type="submit" name="btnSend" id="btnSend" >Buscar
+        				    <i class="material-icons right">search</i>
+        				</button>
+                    </div>
+                </form>
+            </div>
+        </fieldset>
+        
+        <div id="dialog-confirm" title="Eliminar Alumno" hidden>
+            <p>
+              <span class="ui-icon ui-icon-alert">
+              </span>La beneficiaria será eliminada y no habrá manera de recuperarla. ¿Estás segur@?
+            </p>
+        </div>
+        
+        <div><br></div>
+        
+        <div class="row">
+            <div >
+                <a  href="reg_alumna1.php" class="btn-floating right btn-large waves-effect waves-light pinkFim"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+
+        <!-- INCLUIR AJAX
+        <fieldset>
+            <div class="administrativo">
+                <h5> Lista de beneficiarias: </h5>
+                <br>
+            </div>
+            <table class="bordered highlight  ">
+                        <thead>
+                          <tr>
+                              <th data-field="nombre">Nombre</th>
+                              <th data-field="apellidos">Apellidos</th>
+                              <th data-field="estatus">Estatus</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                </table>
+        </fieldset>
+        -->
+        
+        
+    </div>
+    
+    
+    
+<!--Eliminacion-->
+        
+        <div id="confirmar" class="modal">
+            <div class="modal-content">
+                <h4>Confirmar Eliminación</h4>
+                <p>¿Segur@ que quieres eliminar esta alumna? Esta accción no se puede deshacer.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close btn-flat">No</a>
+                <a href="#!" id="botonEliminar" onclick="" class="modal-action modal-close btn-flat">Sí</a>
+            </div>
+        </div>
+        
+        <div id="exito" class="modal">
+            <div class="modal-content">
+                <h4>Eliminación realizada con éxito</h4>
+            </div>
+        </div>
+        
+
+     

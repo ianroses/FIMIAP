@@ -1,0 +1,43 @@
+  
+    <!-- starts content  -->
+    <div class="content administrativo"> 
+        <div class="administrativo">
+            <h5><strong>Registro de gastos </strong></h5>
+        </div>
+        <div><br><br></div>
+        <div class="row">
+        <form class="col s12" action="reg_gasto.php" method="POST" enctype="multipart/form-data" >
+            <fieldset>
+          <div class="row">
+            <div class="input-field col s6">
+                Descripción del gasto:<br><br>
+              <input placeholder="Descripción del gasto" id="gasto" name="descripcion" type="text" class="validate" required>
+              <label for="gasto">   </label>
+            </div>
+            <div class="input-field col s6">
+               Fecha en que se realizó el gasto: <br><br> 
+             <input type="date" class="datepicker" id="fecha_g" name="fecha" required>
+              
+            </div>
+          </div>
+            <div class="row">
+              <div class="input-field col s6">
+                  Monto del Gasto:<br><br>
+              <input placeholder="Descripción del gasto" id="gasto" name="monto" type="number" class="validate" required>
+              <label for="gasto">   </label>
+            </div>
+            </div>
+                
+            </fieldset>
+            <div><br><br></div>
+            <div class="row col s12 ">
+                <button class="btn-large waves-effect waves-light blueFim white-text enviar_y_guardar" type="submit" name="btnSend" id="btnSend" >Registrar Gasto
+			        <i class="material-icons right">done</i>
+			    </button>
+            </div>
+            
+        </form>
+      </div>
+   </div>       
+    <!-- ends content -->   
+       

@@ -1,0 +1,377 @@
+    <!-- archivo parcial igual al de _reg_alumna1.html, pero los campos tienen la información que existe en la base de datos  -->
+    <div class="content administrativo"> 
+        <div class="administrativo">
+            <h5><strong>Modificar Beneficiaria </strong></h5>
+        </div>
+        <div><br><br></div>
+        
+        <form class="col s12" action="modificar_alumna1.php" method="POST" enctype="multipart/form-data" >
+         
+         <!--Forma oculta para pasar con POST el ID a modificar_alumna1.php-->
+        <input type="hidden" value='<?php echo $id; ?>' id="id" name="id" type="text" class="validate" >
+  
+        <div class="row">
+            
+            <fieldset>
+
+                <div class="administrativo">
+                    <h5><strong>Información Personal </strong></h5>
+                </div>
+                <div><br><br></div>
+    
+    
+         
+                <div class="row">
+                    <div class="input-field col s6">
+                       <input required placeholder="Nombre(s)" value='<?php echo $infoPersonal["Nombre"]; ?>' id="first_name" name="first_name" type="text" class="validate" >
+                      <label for="first_name">   </label>
+                    </div>
+                    <div class="input-field col s6">
+                       <input required placeholder="Apellido(s)" value='<?php echo $infoPersonal["Apellidos"]; ?>' id="last_name" name="last_name" type="text" class="validate"  >
+                      <label for="last_name">   </label>
+                    </div>
+                </div>
+          
+                
+                <div class="row">
+                    <div class="input-field col s4">
+                       <input required placeholder="Calle y número" value='<?php echo $infoPersonal["Calle_numero"]; ?>' id="calle_numero" name="calle_numero" type="text" class="validate"  >
+                      <label for="calle_numero">   </label>
+                    </div>
+                    <div class="input-field col s4">
+                       <input required placeholder="Colonia" value='<?php echo $infoPersonal["Colonia"]; ?>' id="colonia" name="colonia" type="text" class="validate"  >
+                      <label for="colonia">   </label>
+                    </div>
+                    <div class="input-field col s4">
+                      <select id="municipio" name="municipio">
+                            <option value="" disabled selected>Elige una opción</option>
+                            <option value="Amealco" <?php if(($infoPersonal["Municipio"])=="Amealco"){echo "selected";} ?>>Amealco</option>
+                            <option value="Pinal de Amoles" <?php if(($infoPersonal["Municipio"])=="Pinal de Amoles"){echo "selected";} ?>>Pinal de Amoles</option>
+                            <option value="Arroyo Seco" <?php if(($infoPersonal["Municipio"])=="Arroyo Seco"){echo "selected";} ?>>Arroyo Seco</option>
+                            <option value="Cadereyta"<?php if(($infoPersonal["Municipio"])=="Cadereyta"){echo "selected";} ?>>Cadereyta</option>
+                            <option value="El pueblito" <?php if(($infoPersonal["Municipio"])=="El Pueblito"){echo "selected";} ?>>El pueblito</option>
+                            <option value="Ezequiel Montes" <?php if(($infoPersonal["Municipio"])=="Ezequiel Montes"){echo "selected";} ?>>Ezequiel Montes</option>
+                            <option value="Huimilpan" <?php if(($infoPersonal["Huimilpan"])=="Amealco"){echo "selected";} ?>>Huimilpan</option>
+                            <option value="Jalpan de Serra" <?php if(($infoPersonal["Municipio"])=="Jalpan de Serra"){echo "selected";} ?>>Jalpan de Serra</option>
+                            <option value="Landa de Matamoros" <?php if(($infoPersonal["Municipio"])=="Landa de Matamoros"){echo "selected";} ?>>Landa de Matamoros</option>
+                            <option value="El Marqués"<?php if(($infoPersonal["Municipio"])=="El Marqués"){echo "selected";} ?>>El Marqués</option>
+                            <option value="Pedro Escobedo" <?php if(($infoPersonal["Municipio"])=="Pedro Escobedo"){echo "selected";} ?>>Pedro Escobedo</option>
+                            <option value="Peñamiller" <?php if(($infoPersonal["Municipio"])=="Peñamiller"){echo "selected";} ?>>Peñamiller</option>
+                            <option value="Querétaro" <?php if(($infoPersonal["Municipio"])=="Querétaro"){echo "selected";} ?>>Querétaro</option>
+                            <option value="San Joaquín" <?php if(($infoPersonal["Municipio"])=="San Joaquín"){echo "selected";} ?>>San Joaquín</option>
+                            <option value="San Juan del Río" <?php if(($infoPersonal["Municipio"])=="San Juan del Río"){echo "selected";} ?>>San Juan del Río</option>
+                            <option value="Tequisquiapan" <?php if(($infoPersonal["Municipio"])=="Tequisquiapan"){echo "selected";} ?>>Tequisquiapan</option>
+                            <option value="Tolimán" <?php if(($infoPersonal["Municipio"])=="Tolimán"){echo "selected";} ?>>Tolimán</option>
+                            <option value="Colón" <?php if(($infoPersonal["Municipio"])=="Colón"){echo "selected";} ?>>Colón</option>
+                        </select>
+                        <label>Municipio</label>
+                    </div>
+                </div>
+                
+                
+                <div class="row">
+                    <div class="input-field col s4">
+                       <input maxlength="5" value='<?php echo $infoPersonal["ZIP"]; ?>' required placeholder="Código Postal" id="cp" name="cp" type="tel" class="validate"  >
+                      <label for="cp"> Código Postal  </label>
+                    </div>
+                    <div class="input-field col s4">
+                       <input value='<?php echo $infoPersonal["Ocupacion"]; ?>' required placeholder="Ocupación" id="ocupacion" name="ocupacion" type="text" class="validate"  >
+                      <label for="ocupacion"> Ocupación  </label>
+                    </div>
+                    <div class="input-field col s4">
+                        <select name="estado_civil" value='<?php echo $infoPersonal["Estado_Civil"]; ?>' >
+                            <option value="" disabled selected>Elige una opción</option>
+                            <option value="Casada" <?php if(($infoPersonal["Estado_Civil"])=="Casada"){echo "selected";} ?>>Casada</option>
+                            <option value="Soltera" <?php if(($infoPersonal["Estado_Civil"])=="Soltera"){echo "selected";} ?>>Soltera</option>
+                            <option value="Viuda" <?php if(($infoPersonal["Estado_Civil"])=="Viuda"){echo "selected";} ?>>Viuda</option>
+                            <option value="Divorciada" <?php if(($infoPersonal["Estado_Civil"])=="Divorciada"){echo "selected";} ?>>Divorciada</option>
+            
+                        </select>
+                        <label>Estado Civil</label>
+                    </div>
+                </div>
+      
+                <div class="row">
+                        <div class="input-field col s6">
+                        Fecha de nacimiento:
+                           <input value='<?php echo $infoPersonal["Fecha_de_nacimiento"]; ?>' required type="date" class="datepicker" id="fecha_nac" name="fecha_nac_alumna"  >
+                        </div>
+                </div>
+      
+                <div class="row">
+                    <div class="input-field col s4">
+                     <input maxlength="10" value='<?php echo $infoPersonal["Tcasa"]; ?>' required placeholder="Teléfono" id="telefono_casa" name="telefono_casa_alumna" type="tel" class="validate"  >
+                    <label for="telefono_casa">   </label>
+                    </div>
+                    <div class="input-field col s4">
+                     <input maxlength="10" value='<?php echo $infoPersonal["Tcel"]; ?>' required placeholder="celular" id="celular" name="celular" type="tel" class="validate"  >
+                    <label for="celular">   </label>
+                    </div>
+                    <div class="input-field col s4">
+                        <select name="genero_alumna" value='<?php echo $infoPersonal["Genero"]; ?>' >
+                          <option value="" disabled selected>Elige una opción</option>
+                          <option value="Hombre" <?php if(($infoPersonal["Genero"])=="H"){echo "selected";} ?>>Hombre</option>
+                          <option value="Mujer" <?php if(($infoPersonal["Genero"])=="M"){echo "selected";} ?>>Mujer</option>
+                        </select>
+                        <label>Género</label>
+                    </div>
+                </div>
+        
+                <div class="row">
+                <div class="input-field col s6">
+                    Estatus de alumna:
+                    <select name="estatus_fim" value='<?php echo $infoPersonal["Estatus"]; ?>' >
+                          <option value="" disabled selected>Elige una opción</option>
+                          <option value="Dada de alta" <?php if(($infoPersonal["Estatus"])=="Dada de alta"){echo "selected";} ?>>Dada de alta</option>
+                          <option value="Dada de Baja"<?php if(($infoPersonal["Estatus"])=="Dada de baja"){echo "selected";} ?>>Dada de Baja</option>
+                    </select>            
+                </div>
+                <div class="input-field col s6">
+                        
+                         <input value='<?php echo $infoPersonal["medio_se_entero_FIM"]; ?>' required id="enteraste" name="enteraste" type="text" class="validate"  >
+                        <label for="enteraste">Como te enteraste de FIM: </label>
+              
+                  </div>
+                </div>
+         
+
+                <div class="row">
+                    <div class="input-field col s4">
+                         <input value='<?php echo $infoPersonal["Contacto_Nombre"]; ?>' required id="nombre_emergencia" name="nombre_emergencia" type="text" class="validate"  >
+                        <label for="nombre_emergencia">Nombre de contacto de emergencia:</label>
+                    </div>
+                    <div class="input-field col s4">
+                        
+                         <input maxlength="10" value='<?php echo $infoPersonal["Contacto_telefono"]; ?>' required id="emergencia_tel" name="emergencia_tel" type="tel" class="validate"  >
+                        <label for="emergencia_tel"> Telefono de contacto  </label> 
+                    </div>
+                </div>
+                
+                <div><br><br></div>
+                <!--<div class="row col s12 ">
+                         <input  type="submit" value="Guardar datos" class=" center btn waves-effect waves-light pinkFim lighten-2 white-text col s3  btn-large enviar_y_guardar">
+                </div>
+        </form>-->
+        </fieldset>
+        </div>
+        <div><br><br></div>
+        <div><br><br></div>
+        <fieldset>
+        <div class="administrativo">
+            <h5><strong> Historial Académico </strong></h5>
+        </div>
+        <div><br><br></div>
+        <div class="row">
+           <!-- <form class="col s12" action="registro_alumna2.php" method="POST" enctype="multipart/form-data" >
+             -->
+                <div class="row">
+                    <div class="input-field col s4">
+                        <select id = "grado_estudios" name = "grado_estudios">
+                          <option value="" disabled selected>Elige una opción</option>
+                          <option value="Primaria" <?php if(($infoAcademica["Grado_estudios"])=="Primaria"){echo "selected";} ?>>Primaria</option>
+                          <option value="Secundaria" <?php if(($infoAcademica["Grado_estudios"])=="Secundaria"){echo "selected";} ?>>Secundaria</option>
+                            <option value="Preparatoria" <?php if(($infoAcademica["Grado_estudios"])=="Preparatoria"){echo "selected";} ?>>Preparatoria</option>
+                            <option value="Carrera tecnica" <?php if(($infoAcademica["Grado_estudios"])=="Carrera tecnica"){echo "selected";} ?>>Carrera técnica</option>
+                            <option value="Ninguno" <?php if(($infoAcademica["Grado_estudios"])=="Ninguno"){echo "selected";} ?>>Ninguno</option>
+                        </select>
+                        <label>Grado de estudios:</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <select name="estatus_escolaridad"  >
+                          <option value="" disabled selected>Elige una opción</option>
+                          <option value="Terminada" <?php if(($infoAcademica["Status"])=="Terminada"){echo "selected";} ?>>Terminada</option>
+                          <option value="Trunca" <?php if(($infoAcademica["Status"])=="Trunca"){echo "selected";} ?>>Trunca</option>
+                            <option value="Ninguna" <?php if(($infoAcademica["Status"])=="Ninguna"){echo "selected";} ?>>Ninguna</option>
+                        </select>
+                        <label>Estatus de estudios:</label>
+                    </div>
+                    <div class="input-field col s4">
+                         <input maxlength="4" value='<?php echo $infoAcademica["anios_suspension"]; ?>' id="anio_suspension" name="anio_suspension" type="tel" class="validate"  >
+                        <label for="anio_suspension">Año en que suspendió estudios:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                         <input value='<?php echo $infoAcademica["motivo_suspension_estudios"]; ?>'  id="motivo_susp" name="motivo_susp" type="text" class="validate"  >
+                        <label for="motivo_susp">Motivo de suspensión de estudios:</label>
+                    </div>
+                    <div class="input-field col s4">
+                         <input value='<?php echo $infoAcademica["otros_estudios"]; ?>' id="otros_estudios" name="otros_estudios" type="text" class="validate"  >
+                        <label for="otros_estudios">Otros estudios:</label>
+                    </div>
+                </div>
+         
+                
+                <div><br><br></div>
+                <!--<div class="row col s12 ">
+                         <input  type="submit" value="Guardar datos" class=" center btn waves-effect waves-light pinkFim lighten-2 white-text col s3  btn-large enviar_y_guardar">
+                    </div>
+            </form>-->
+        </div>
+        </fieldset>
+        <div><br><br></div>
+        
+        
+        <fieldset>    
+        <div class="administrativo">
+            <h5><strong> Información laboral </strong></h5>
+        </div>
+        <div><br><br></div>
+        
+        <div class="row">
+           <!-- <form class="col s12" action="registro_alumna3.php" method="POST" enctype="multipart/form-data" >
+         -->
+                <div class="row">
+                    <div class="input-field col s4">
+                         <input value='<?php echo $infoLaboral["Empresa"]; ?>' id="empresa" name="empresa" type="text" class="validate"  >
+                        <label for="empresa">Empresa:</label>
+                    </div>
+                    <div class="input-field col s4">
+                         <input value='<?php echo $infoLaboral["Puesto"]; ?>'  id="puesto" name="puesto" type="text" class="validate"  >
+                        <label for="puesto">Puesto:</label>
+                    </div>
+                        <div class="input-field col s4">
+                         <input maxlength="4" value='<?php echo $infoLaboral["Antiguedad"]; ?>' id="antiguedad" name="antiguedad" type="tel" class="validate"  >
+                        <label for="antiguedad">Año de ingreso:</label>
+                    </div>
+                </div>
+    
+            
+            <div><br><br></div>
+         
+        </div>
+        </fieldset>
+        <div><br><br></div>
+
+ 
+        <div><br><br></div>
+        <fieldset>
+        <div class="administrativo">
+            <h5><strong> Herramientas Tecnológicas </strong></h5>
+        </div>
+        
+                
+        <div class="row">
+           <!-- <form class="col s12" action="registro_alumna4.php" method="POST" enctype="multipart/form-data" >
+            -->
+            <div class="input-field col s4">
+                <select id="acceso_it" name = "acceso_it">
+                  <option value="" disabled selected>Elige una opción</option>
+                  <option value="Si" <?php if(($infoHerramientas["Acceso"])=="Si"){echo "selected";} ?>>Si</option>
+                  <option value="No" <?php if(($infoHerramientas["Acceso"])=="No"){echo "selected";} ?>>No</option>
+                </select>
+                <label>Cuenta con acceso a internet:</label>
+            </div>
+
+            <div class="input-field col s4">
+                <select multiple id="herramientas" name="herramientas"  >
+                  <option value="" disabled selected>Elige una opción</option>
+                  <option value="Microsoft Word" <?php if(($infoHerramientas["Herramientas"])=="Microsoft Word"){echo "selected";} ?>>Microsoft Word</option>
+                  <option value="Microsoft Excel" <?php if(($infoHerramientas["Herramientas"])=="Microsoft Excel"){echo "selected";} ?>>Microsoft Excel</option>
+                    <option value="Microsoft Power Point" <?php if(($infoHerramientas["Herramientas"])=="Microsoft Power Point"){echo "selected";} ?>>Microsoft Power Point</option>
+                    <option value="Correo electrónico" <?php if(($infoHerramientas["Herramientas"])=="Correo electrónico"){echo "selected";} ?>>Correo electrónico</option>
+                    <option value="Ninguno" <?php if(($infoHerramientas["Herramientas"])=="Ninguno"){echo "selected";} ?>></option>
+                </select>
+                <label>Herramientas que domina:</label>
+            </div>
+        </div>
+            <div><br><br></div>
+            <!--<div class="row col s12 ">
+                     <input  type="submit" value="Guardar datos" class=" center btn waves-effect waves-light pinkFim lighten-2 white-text col s3  btn-large enviar_y_guardar">
+                </div>
+            </form>-->
+
+        
+        </fieldset>
+        <div><br><br></div>
+        
+         
+        <div><br><br></div>
+        <fieldset>
+        <div class="administrativo">
+            <h5><strong> Situación Económica-Familiar </strong></h5>
+        </div>
+        <div><br><br></div>
+
+        <div class="row">
+            <!--<form class="col s12" action="registro_alumna5.php" method="POST" enctype="multipart/form-data" >
+            -->
+            <div class="row">
+                <div class="input-field col s6">
+                    <select id="vivienda_compartida" name = "vivienda_compartida"  >
+                      <option value="" disabled selected>Elige una opción</option>
+                      <option value="Padres" <?php if(($infoSituacion["vivienda_compartida"])=="Padres"){echo "selected";} ?>>Padres</option>
+                      <option value="Cónyugue" <?php if(($infoSituacion["vivienda_compartida"])=="Cónyugue"){echo "selected";} ?>>Cónyugue</option>
+                      <option value="Sola" <?php if(($infoSituacion["vivienda_compartida"])=="Sola"){echo "selected";} ?>>Sola</option>
+                      <option value="Otros" <?php if(($infoSituacion["vivienda_compartida"])=="Otros"){echo "selected";} ?>>Otros</option>
+                    </select>
+                    <label>Vivienda compartida:</label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="input-field col s4">
+                     <input value='<?php echo $infoSituacion["responsable_pago"]; ?>'  id="responsable_pago" name="responsable_pago" type="text" class="validate"  >
+                    <label for="responsable_pago">Nombre del responsable de pago:</label>
+                </div>
+                <div class="input-field col s4">
+                     <input value='<?php echo $infoSituacion["parentesco"]; ?>' id="parentesco" name="parentesco" type="text" class="validate"  >
+                    <label for="parentesco">Parentesco del responsable:</label>
+                </div>
+                <div class="input-field col s4">
+                    <select name = "situacion_v" id="situacion_v" >
+                      <option value="" disabled selected>Elige una opción</option>
+                      <option value="Patrimonio Familiar" <?php if(($infoSituacion["situacion_vivienda"])=="Patrimonio Familiar"){echo "selected";} ?>>Patrimonio Familiar</option>
+                      <option value="Compartida" <?php if(($infoSituacion["situacion_vivienda"])=="Compartida"){echo "selected";} ?>>Compartida</option>
+                        <option value="Comodato" <?php if(($infoSituacion["situacion_vivienda"])=="Comodato"){echo "selected";} ?>>Comodato</option>
+                        <option value="Rentada" <?php if(($infoSituacion["situacion_vivienda"])=="Rentada"){echo "selected";} ?>>Rentada</option>
+                        <option value="Otro" <?php if(($infoSituacion["situacion_vivienda"])=="Otro"){echo "selected";} ?>>Otro</option>
+                    </select>
+                    <label>Situación de vivienda: </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4">
+                    <select name="fuente_ingresos" id="fuente_ingresos" >
+                      <option value="" disabled selected>Elige una opción</option>
+                      <option value="Padres" <?php if(($infoSituacion["fuente_ingresos"])=="Padres"){echo "selected";} ?>>Padres</option>
+                      <option value="Cónyugue" <?php if(($infoSituacion["fuente_ingresos"])=="Cónyugue"){echo "selected";} ?>>Cónyugue</option>
+                        <option value="Yo misma" <?php if(($infoSituacion["fuente_ingresos"])=="Yo misma"){echo "selected";} ?>>Yo misma</option>
+                        <option value="Hermanos" <?php if(($infoSituacion["fuente_ingresos"])=="Hermanos"){echo "selected";} ?>>Hermanos</option>
+                        <option value="Otro" <?php if(($infoSituacion["fuente_ingresos"])=="Otro"){echo "selected";} ?>>Otro</option>
+                    </select>
+                    <label>Fuente de ingresos: </label>
+                </div>
+                <div class="input-field col s4">
+                    <select multiple name="servicios" id="servicios" >
+                      <option value="" disabled selected>Elige una opción</option>
+                      <option value="Agua" <?php if(($infoSituacion["servicios"])=="Agua"){echo "selected";} ?>>Agua</option>
+                      <option value="Luz" <?php if(($infoSituacion["servicios"])=="Luz"){echo "selected";} ?>>Luz</option>
+                        <option value="Teléfono" <?php if(($infoSituacion["servicios"])=="Teléfono"){echo "selected";} ?>>Teléfono</option>
+                        <option value="Internet" <?php if(($infoSituacion["servicios"])=="Internet"){echo "selected";} ?>>Internet</option>
+                        <option value="Computadora" <?php if(($infoSituacion["servicios"])=="Computadora"){echo "selected";} ?>>Computadora</option>
+                        <option value="Auto" <?php if(($infoSituacion["servicios"])=="Otro"){echo "Auto";} ?>>Auto</option>
+                    </select>
+                    <label>Servicios con los que cuenta: </label>
+                </div>
+                <div class="input-field col s4">
+                     <input value='<?php echo $infoSituacion["monto_ingresos"]; ?>'  id="ingresos" name="ingresos" type="number" class="validate"  >
+                    <label for="ingresos">Monto mensual de ingresos:</label>
+                </div>
+            </div>
+         
+            <div><br><br></div>
+            <div class="row col s12 ">
+                <button class="btn-large blueFim enviar_y_guardar right" type="submit" name="action"> 
+                    <i class="material-icons right">send</i> Modificar datos
+                </button>
+            </div>
+            </fieldset>
+            
+            
+            </form>
+            
+       
+         </div>
+         
+         <div><br><br></div>

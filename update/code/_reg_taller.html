@@ -1,0 +1,49 @@
+  
+    <!-- starts content  -->
+    <div class="content administrativo"> 
+        
+        <div class="administrativo">
+            <h5>Datos de Taller</h5>
+        </div>
+        <form class="col s12" action="registro_taller.php" method="POST" enctype="multipart/form-data">
+        <fieldset>
+        <div class="row">
+            <div class="input-field col s4">
+                <br>
+                <input placeholder="Nombre de taller" id="nombre_taller" name="nombre_taller" type="text" class="validate" required>
+                <label for="nombre_taller">Nombre del Taller</label>
+            </div>
+            
+            <div class="input-field col s4">
+                <br>
+                <input placeholder="Costo $" id="costo_taller" name="costo_taller" type="text" class="validate" required>
+                <label for="costo_taller">Costo del Taller</label>
+            </div>
+               
+          <div class="input-field col s4">
+                 Fecha y horario de taller:
+                <input placeholder="Fecha y horario" type="text" id="fecha_taller" name="fecha_taller" class="validate" required>
+          <label for="fecha_taller">   </label>
+            </div>
+
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <br>
+                <input placeholder="Breve descripción" id="descripcion_taller" name="descripcion_taller" type="text" class="validate" required>
+                <label for="descripcion_taller">Descripción del Taller</label>
+            </div>    
+        </div>
+        
+        </fieldset>
+        <div><br><br></div>
+        <div align="right">
+        <input value="Guardar" class="btn blueFim waves-effect waves-light btn-large enviar_y_guardar" type="submit" name="action">
+        </div>
+        
+      </form>
+        <div><br><br></div>
+        
+       </div>       
+    <!-- ends content -->   

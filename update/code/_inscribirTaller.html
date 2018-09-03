@@ -1,0 +1,66 @@
+<div class="content administrativo">
+    <!-- Título HTML -->
+    <h1> Inscribir Alumna a Taller </h1>
+    
+    <!--Campo con nombre de alumna a inscribir -->
+    <div class="row col s12">
+        <h5 class="col s2"> Alumna: </h5>
+        <input class="input-field col s6" id="alumnaSeleccionada" type="text"readonly/>
+        <div class="col s1"> </div>
+        <button class="btn blueFim col s3" onclick="buscarAlumna()"> Buscar Alumna </button>
+    </div>
+  
+     <!-- ID oculto -->
+    <input type=text id="idAlumna" hidden/>
+    
+    <!--Talleres inscritos de la alumna seleccionada-->
+    <div id="talleresDeAlumna">
+        
+        <div class="row col s12" id="talleresDeAlumna">
+            <h5 class="col s3"> Talleres Inscritos: </h5>
+            <button class="btn blueFim col s3 right" onclick="buscarTaller()"> Agregar Taller </button>
+        </div>
+        
+        <div class="row col s12">
+            <ul class="collection listaSeleccionable" id="listaTalleres"> 
+    
+            </ul>
+        </div>
+        
+    </div>
+    
+        <!-- Modal -->
+    <div id="modal" class="modal modalStatic">
+        <div class="modal-content">
+            <div class="row col s12">
+                <!--Título del modal -->
+                <h4 class="col s5" id="title"></h4>
+                
+                <!--Icono de cargar -->
+                <div class="preloader-wrapper small active" id="loader">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                         </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Entrada de usuario -->
+            <input class="row" type="text" id="entradaUsuario" placeholder="Filtrar por nombre"/>
+
+           
+            <!-- Lista con talleres/alumnas -->
+            <ul class="collection listaSeleccionable" id="listaAjax">
+            </ul>
+            
+            <!-- Información de taller-->
+            <div id="info">
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

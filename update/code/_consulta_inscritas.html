@@ -1,0 +1,43 @@
+<div class='content administrativo'> 
+        <!--forma de consulta-->
+        <div class="administrativo">
+            <fieldset>
+            <div class="administrativo">
+                <h3><strong> Filtrar por fecha de inscripción </strong></h3>
+            </div>
+            
+            <div class="row">
+                <!--consultar por fecha-->
+                <form class="col s12" action="consultar_Inscritas.php" method="POST" enctype="multipart/form-data" >
+                    <div class="row">
+                            <div class="input-field col s6">Fecha inicial: <br><br> 
+                                 <input type="date" class="datepicker" id="fecha" name="fechaInicial" required>
+                            </div>
+                            <div class="input-field col s6">Fecha final: <br><br> 
+                                 <input type="date" class="datepicker" id="fecha" name="fechaFinal" required>
+                            </div>
+                            <input type="hidden" value='<?php echo $id; ?>' id="id" name="idTaller" type="text" class="validate" >
+                            <div><br><br></div>
+                    </div>
+                    <div class="row col s12 ">
+					    <button class="btn right waves-effect waves-light blueFim white-text enviar_y_guardar" type="submit" name="btnSend" id="btnSend" >Buscar
+        				    <i class="material-icons right">search</i>
+        				</button>
+                    </div>
+                </form>
+                <!--fin de consultar por fecha-->
+            </div>
+            </fieldset>
+        </div>
+        <!--Inicia tabla -->
+            <div style='display: block; overflow-x: auto; height: 30em; overflow-y: auto; white-space: nowrap;'>
+                <style>th.minWidth{min-width: 10em;}</style>
+                <div class="administrativo">
+                        <fieldset><h3> Alumnas Inscritas </h3>  
+                            <table class='bordered striped centered  '>
+                                <?php echo $inscritas; ?>
+                            </table>
+                        </fieldset>
+                </div>
+            </div>
+</div>

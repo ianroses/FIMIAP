@@ -1,0 +1,23 @@
+<div class='content administrativo'> 
+            
+            <div style='display: block; overflow-x: auto; height: 30em; overflow-y: auto; white-space: nowrap;'>
+                <style>th.minWidth{min-width: 10em;}</style>
+                <div class="administrativo">
+                    <fieldset><h3> Alumnas Registradas </h3>  
+                    <?= $tabla = tablaInfoTotal(); ?>
+                    </fieldset>
+                </div>
+                <br>
+            </div>
+            <div class="row col s12 ">
+                <br><button type="button" onClick="descargaExcel()" class="btn right waves-effect waves-light blueFim white-text enviar_y_guardar">
+                    Excel
+                </button>
+                
+            </div>
+            <div class="row col s12 ">
+                <br><button type="button" onClick="descargaPDF()" class="btn right waves-effect waves-light blueFim white-text enviar_y_guardar">
+                    PDF
+                </button>
+            </div>
+</div>

@@ -1,0 +1,54 @@
+        
+        <div id="dialog-confirm" title="Elimnar Usuario" hidden>
+            <p>
+              <span class="ui-icon ui-icon-alert">
+              </span>El usuario será borrado y no habrá manera de recuperarlo. ¿Estás segur@?
+            </p>
+        </div>
+
+        <div class="content administrativo">
+            <h1> Usuarios </h1>
+            <br>
+            <div class="row">
+                <a  href="registroUsuario.php" class="right btn-floating btn-large waves-effect waves-light pinkFim"><i class="material-icons">add</i></a>
+            </div>
+                <table class="bordered highlight   centered">
+                        <thead>
+                          <tr>
+                              <th data-field="titulo">Apellidos</th>
+                              <th data-field="titulo">Nombre</th>
+                              <th data-field="fechapub">Contacto</th>
+                              <th data-field="modificar"> </th>
+                              <th data-field="eliminar"> </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <?= listaUsuarios() ?>
+                        </tbody>
+                </table>
+        </div>
+        
+        <div id="exitoRegistro" class="modal">
+            <div class="modal-content">
+                <h4>Registro realizado con éxito</h4>
+            </div>
+        </div>
+        
+        <div id="confirmar" class="modal">
+            <div class="modal-content">
+                <h4>Confirmar Eliminación</h4>
+                <p>¿Segur@ que quieres eliminar este usuario? Esta accción no se puede deshacer.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close btn-flat">No</a>
+                <a href="#!" id="botonEliminar" onclick="" class="modal-action modal-close btn-flat">Sí</a>
+            </div>
+        </div>
+        
+        <div id="exito" class="modal">
+            <div class="modal-content">
+                <h4>Eliminación realizada con éxito</h4>
+            </div>
+        </div>
+                
+             

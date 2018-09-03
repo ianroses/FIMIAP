@@ -1,0 +1,29 @@
+
+  <div class=" center row col s12">
+    <p></p>
+        <label class="center-align"><strong class="blueFim-text center-align">Administrativos</strong></label>
+  </div>
+  
+    <div id=" login-page" class="row">
+      <form class="col s6 push-s3 center z-depth-1 grey lighten-4" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data" >
+          
+        <div class="row input-field col s8 push-s2">
+            <i class="small material-icons">perm_identity</i>
+            <input class="s8" placeholder="Usuario" id="username" name="usuario" type="text" required>
+        </div>
+        
+        <div class="row input-field col s8 push-s2">
+            <i class="small material-icons">lock</i>
+            <input class="s8" placeholder="contraseña" id="password" name="contrasena" type="password" required>
+        </div>
+    
+        <div class="row col s12">
+          <div class="center input-field">
+    					  <button class="btn  waves-effect waves-light blueFim white-text" type="submit" name="btnSend" id="btnSend" >
+    					    <i class="material-icons right">done_all</i> Entrar
+    					  </button>
+          </div>
+        </div>
+        
+      </form>
+    </div>

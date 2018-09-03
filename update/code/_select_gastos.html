@@ -1,0 +1,33 @@
+ <!-- starts content  -->
+    <div class="content administrativo"> 
+        <div class="administrativo">
+            <h5><strong>Consulta de gastos </strong></h5>
+        </div>
+        <div><br><br></div>
+        <div class="row">
+        <form class="col s12" action="registro_gasto.php" method="POST" enctype="multipart/form-data" >
+            <fieldset>
+          <div class="row">
+            <div class="input-field col s6">
+              Fecha Inicio:<br><br> 
+             <input type="date" class="datepicker" id="fecha_g" name="fecha" required>
+              
+            </div><div class="input-field col s6">
+               Fecha Fin: <br><br> 
+             <input type="date" class="datepicker" id="fecha_g" name="fecha" required>
+              
+            </div>
+            
+          </div>
+           
+            </fieldset>
+            <div><br><br></div>
+            <div class="row col s12 ">
+                <input type="submit" value="Registrar Gasto" class=" center btn waves-effect waves-light pinkFim lighten-2 white-text col s3  btn-large enviar_y_guardar">
+            </div>
+            
+        </form>
+      </div>
+   </div>       
+<!-- ends content -->   
+       

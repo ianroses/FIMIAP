@@ -1,0 +1,53 @@
+<!-- archivo parcial igual al de _reg_taller.html, pero los campos tienen la información que existe en la base de datos  -->
+<!-- starts content  -->
+    <div class="content administrativo"> 
+        
+        <div class="administrativo">
+            <h5>Datos de Taller</h5>
+        </div>
+        <form class="col s12" action="modificar_taller1.php" method="POST" enctype="multipart/form-data">
+        <!--Forma oculta para pasar con POST el ID a modificarTaller.php-->
+        <input type="hidden" value='<?php echo $id; ?>' id="id" name="id" type="text" >
+  
+        <fieldset>
+        <div class="row">
+            <div class="input-field col s4">
+                <br>
+                <input value='<?php echo $infoTaller["nombre_taller"]; ?>' placeholder="Nombre de taller" id="nombre_taller" name="nombre_taller" type="text" class="validate" required>
+                <label for="nombre_taller">Nombre del Taller</label>
+            </div>
+            
+            <div class="input-field col s4">
+                <br>
+                <input value='<?php echo $infoTaller["costo"]; ?>' placeholder="Costo $" id="costo_taller" name="costo_taller" type="text" class="validate" required>
+                <label for="costo_taller">Costo del Taller</label>
+            </div>
+               
+          <div class="input-field col s4">
+                 Fecha y horario de taller:
+                <input value='<?php echo $infoTaller["horarios"]; ?>' placeholder="Fecha y horario" type="text" id="fecha_taller" name="fecha_taller" class="validate" required>
+          <label for="fecha_taller">   </label>
+            </div>
+
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <br>
+                <input value='<?php echo $infoTaller["descripcion"]; ?>' placeholder="Breve descripción" id="descripcion_taller" name="descripcion_taller" type="text" class="validate" required>
+                <label for="descripcion_taller">Descripción del Taller</label>
+            </div>    
+        </div>
+        
+        </fieldset>
+        <div><br><br></div>
+        <div align="right">
+            <button class="btn-large blueFim enviar_y_guardar right" type="submit" name="action"> <i class="material-icons right">send</i> Guardar
+            </button>
+        </div>
+        <div><br><br></div>
+      </form>
+        <div><br><br></div>
+        
+       </div>       
+    <!-- ends content -->   

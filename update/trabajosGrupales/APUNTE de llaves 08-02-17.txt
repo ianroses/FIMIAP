@@ -1,0 +1,61 @@
+clientes(RFCC, Razonsocial, domicilio)
+Pk = RFCC
+Fk = No tiene
+Ak = Razon social
+
+Facturas(NoFactura, fecha, status, RFCC)
+Pk = NoFactura
+Fk = RFCC
+Ak = (NoFactura, fecha)
+
+ventas(cantidad, NoFac, CBarras)
+Pk= (NoFac, CB)
+Fk= (NoFac, CB)
+Ak= (cantidad, NoFac, CBarras)
+
+productos(CB, nombre, descripcion, precio, existencia)
+Pk=CB
+Fk=no tiene
+Ak=CB, nombre
+
+Proveedor(RFCP, razonSocial, domicilio, contacto)
+Pk=RFCP
+Fk=no tiene
+Ak=RFCP, razonSocial
+
+Producto_proveedor(RFCP, CB, fecha, cantidad)
+Pk= (RFCP,CB, fecha) : llave primaria garantiza unicidad.
+Fk= (RFCP, CB): llave foránea (las que hereda, garantiza INTEGRIDAD)
+Ak= (RFCP, CB, fecha, cantidad): LLAVE ALTERNA (-?)
+
+
+-----------------Reglas de álgebra relacional.
+*Grado=numero de columnas.
+*Dominio=nombre de las columnas
+Para aplicar unión (operador binario);  se necesita el mismo dominio y grado.
+
+Tupla = renglon = registro
+Unión= opera con tablas, osea relaciones.
+
+bases de datos distribuidas/avanzadas
+
+..........................................
+
+Productos(CB, nombre, precio)
+Entregas(numero, CB, cantidad)
+Proyectos(numero, nombre)
+
+......................................
+union
+diferencia
+intersección
+
+proyeccion (PI): operador unario, filtra de manera vertical, es decir únicamente unas columnas. pi(subindices) (relacion)
+
+seleccion: sigma.Aplica condiciones sobre campos, en vez de filtrar columnas filtra filas.
+
+Join natural: >< tiene al menos un campo en común; crea una nueva tabla.Es conmutativo.
+
+Teta-join: no tienen columnas en común, se unen de acurdo a algunas condiciones.
+
+Entre más relaciones, el tiempo de consulta es mas tardada.
