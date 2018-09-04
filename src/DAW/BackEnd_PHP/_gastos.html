@@ -1,0 +1,40 @@
+  
+    <!-- starts content  -->
+            
+    <div class="content administrativo"> 
+        <div class="administrativo">
+            <h5><strong>Administración de gastos </strong></h5>
+        </div>
+        <div><br><br></div>
+        <div class="row">
+        <form class="col s12" action="gastos.php" method="POST" enctype="multipart/form-data" >
+            <fieldset>
+                <div class="row">
+                    <div class="input-field col s6">
+                       Fecha en que se realizó el gasto: <br><br> 
+                     <input type="date" class="datepicker" id="fecha_g" name="FI" required>
+                      
+                    </div>
+                    <div class="input-field col s6">
+                       Fecha en que se realizó el gasto: <br><br> 
+                     <input type="date" class="datepicker" id="fecha_g" name="FF" required>
+                      
+                    </div>
+                    <div class="col s12 ">
+				        <button class="btn-large waves-effect waves-light blueFim white-text enviar_y_guardar" type="submit" name="btnSend" id="btnSend" >Consultar
+				        </button>
+                    </div>
+                </div>
+            </fieldset>
+            <div><br><br></div>
+        </form>
+    </div>
+      
+    <div class="row">   <a  href="registro_gasto.php" class="btn-floating right btn-large waves-effect waves-light pinkFim"><i class="material-icons">add</i></a>
+    </div>
+     
+    <!--tabla de gastos-->
+    
+        
+   </div>       
+    <!-- ends content -->   

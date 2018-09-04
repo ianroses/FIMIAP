@@ -1,0 +1,45 @@
+ 
+  <body>
+    <div class="page-flexbox-wrapper">
+      <div class="navbar-fixed">
+        <nav class="pinkFim lighten" role="navigation">
+           <div class="nav-wrapper container">
+              <a id="logo-container" href="index.php" class="brand-logo white-text center">FIM</a>
+              <ul id="slide-out" class="side-nav fixed left-aligned">
+                  <li><div class="userView">
+                    <div class="background">
+                      <img src="http://il6.picdn.net/shutterstock/videos/18933008/thumb/1.jpg">
+                    </div>
+                    <a href="#!user"><img class="circle" src="http://images.iimg.in/c/569f4771c45d324bda8b4660-4-501-0-1453279096/google/user-icon-png-pnglogocom.img?crop=1"></a>
+                    <a href="#!name"><span class="white-text name"><?php echo $_SESSION["nombre"]; ?></span></a>
+                    <a href="#!email"><span class="white-text email"><?php echo $_SESSION["usuario"]; ?></span></a>
+                  </div></li>
+                 
+                  <?= obtenerFunciones() ?>
+                  <li><div class="divider"></div></li>
+                  <li><a class="waves-effect" href="ayuda.php">Ayuda</a></li>
+                  <li><div class="divider"></div></li>
+                  <li><a class="waves-effect" href="logout.php">Salir</a></li>
+                  </ul>
+                
+                <ul id="nav-mobile" class="side-nav">
+                  <li><div class="userView">
+                    <div class="background">
+                      <img src="http://il6.picdn.net/shutterstock/videos/18933008/thumb/1.jpg">
+                    </div>
+                    <a href="#!user"><img class="circle" src="http://images.iimg.in/c/569f4771c45d324bda8b4660-4-501-0-1453279096/google/user-icon-png-pnglogocom.img?crop=1"></a>
+                    <a href="#!name"><span class="white-text name"><?php echo $_SESSION["nombre"]; ?></span></a>
+                    <a href="#!email"><span class="white-text email"><?php echo $_SESSION["usuario"]; ?></span></a>
+                  </div></li>
+                 
+                  <?= obtenerFunciones() ?>
+                  <li><div class="divider"></div></li>
+                  <li><a class="waves-effect" href="ayuda.php">Ayuda</a></li>
+                  <li><div class="divider"></div></li>
+                  <li><a class="waves-effect" href="logout.php">Salir</a></li>
+                  </ul>
+              <a href="#" data-activates="nav-mobile" class="white-text button-collapse"><i class="material-icons">perm_identity</i></a>
+           </div>
+        </nav>
+     </div>
+   <main >

@@ -1,0 +1,58 @@
+<div class="content administrativo">
+    
+    <h1> Galería de Imágenes</h1>
+    <hr> 
+    <!--Imágenes actuales -->
+    <div id="imagenesGaleria">
+
+    </div>
+
+    <!-- Modal para agregar imagen -->
+  <div id="anadirImagen" class="modal">
+    <div class="modal-content">
+      <div class="row cols12">
+        <h4 class="col s4">Añadir Imagen</h4>
+        <div class="preloader-wrapper small active" id="loader">
+              <div class="spinner-layer spinner-blue-only">
+                  <div class="circle-clipper left">
+                      <div class="circle"></div>
+                  </div><div class="gap-patch">
+                      <div class="circle"></div>
+                   </div><div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
+              </div>
+          </div>
+      </div>
+      <form id="formaImagen" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" enctype="multipart/form-data">
+        <div class="file-field input-field col s11">
+            <div class="btn blueFim">
+              <span> Imagen </span>
+              <input type="file" id="imagenGaleria" name="imagenGaleria">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" id="nombreImagenGaleria" name="nombreImagenGaleria">
+            </div>
+        </div>
+        <div id="hideable">
+          <input type="text" name="titulo" placeholder="Descripción de imagen"/>
+          <button class="blueFim btn" type="submit" name="action" onclick="showLoader()">Subir</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  
+  <div id="modalEliminar" class="modal">
+    <div class="modal-content">
+      <h4>¿Seguro que quiere eliminar esta imagen de la Galería?</p>
+    </div>
+                
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">No</a>
+      <a href="#!" id="siEliminarImagen" class="modal-action modal-close waves-effect waves-green btn-flat">Sí</a>
+    </div>
+  </div>
+  
+  
+</div>

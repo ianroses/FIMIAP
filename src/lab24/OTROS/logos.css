@@ -1,0 +1,24 @@
+
+#logoscp {
+    display: none !important;
+    visibility: hidden !important;
+}
+/*
+@media screen and (max-width: 767px){
+    .login-link {
+         display: block;
+    }
+    #login{
+         display: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    #login{
+         display: block;
+    }
+    .login-link{
+         display: none;
+    }
+}
+
+*/

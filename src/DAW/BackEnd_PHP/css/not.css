@@ -1,0 +1,43 @@
+#caption {
+  font-size: 1em;
+  color:#979797;
+}
+
+a {
+  color:#DB436D;
+}
+
+#contenido {
+  word-wrap: break-word;
+}
+
+#tituloNoticia {
+  font-weight:300;
+}
+
+#listaNoticias li img {
+  float: left;
+  margin: 0 15px 0 0;
+  border-radius: 3%;
+  max-width:10em;
+  height:auto;
+}
+
+#listaNoticias li {
+  padding: 10px;
+  overflow: auto;
+}
+
+#listaNoticias li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+#listaNoticias a {
+  color:#3B3B3B;
+}
+
+#infoNoticia {
+  color:#979797;
+  font-size:3em;
+}

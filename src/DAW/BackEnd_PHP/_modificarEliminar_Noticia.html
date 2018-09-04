@@ -1,0 +1,50 @@
+        <!--<div id="dialog-confirm" title="Elimnar Noticia" hidden>
+            <p>
+              <span class="ui-icon ui-icon-alert">
+              </span>La noticia será borrada y no habrá manera de recuperarla. ¿Estás segur@?
+            </p>
+        </div>-->
+        <div class="content administrativo">
+        <h1> Modificar / Eliminar Noticia </h1>
+        <br>
+            <div class="row">
+                <a  href="reg_noticia.php" class="right btn-floating btn-large waves-effect waves-light pinkFim"><i class="material-icons">add</i></a>
+            </div>
+                <table class="bordered highlight  ">
+                        <thead>
+                          <tr>
+                              <th data-field="titulo">Título</th>
+                              <th data-field="fechapub"> Fecha de publicación</th>
+                              <th data-field="modificar"> </th>
+                              <th data-field="eliminar"> </th>
+                          </tr>
+                        </thead>
+                        <tbody id="tablaNoticias">
+                            <?= listaNoticias() ?>
+                        </tbody>
+                </table>
+        </div>
+        <div id="exitoRegistro" class="modal">
+            <div class="modal-content">
+                <h4>Registro realizado con éxito</h4>
+            </div>
+        </div>
+        
+        <div id="confirmar" class="modal">
+            <div class="modal-content">
+                <h4>Confirmar Eliminación</h4>
+                <p>¿Segur@ que quieres eliminar esta Noticia? Esta accción no se puede deshacer.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close btn-flat">No</a>
+                <a href="#!" id="botonEliminar" onclick="" class="modal-action modal-close btn-flat">Sí</a>
+            </div>
+        </div>
+        
+        <div id="exito" class="modal">
+            <div class="modal-content">
+                <h4>Eliminación realizada con éxito</h4>
+            </div>
+        </div>
+        
+     

@@ -1,0 +1,43 @@
+    
+footer, .main {
+      padding-left: 0px;
+    }
+
+header, main, footer {
+      padding-left: 300px;
+    }
+    
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+  
+}
+
+.side-nav.fixed.left-aligned{
+    /*top: 65px;*/
+    
+}
+
+.content.administrativo{
+    padding-top: 2em;
+    padding-right: 3em;
+    padding-left: 24em !important;
+}
+
+.enviar_y_guardar{
+    background: #2B8F49;
+}
+
+.btn, .btn-large { 
+  background-color: #2B8F49; /* BG */
+  color: #CFD8DC; /* Text */
+}
+    
+
+.toRight{
+    padding-left: 50em;
+}
+
+

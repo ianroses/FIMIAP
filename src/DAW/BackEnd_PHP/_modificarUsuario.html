@@ -1,0 +1,112 @@
+    <!-- starts content  -->
+    <div class="content administrativo"> 
+      <div class="administrativo s12">
+          <h5><strong>Modificar usuario: <?php echo $_GET["nombre"];?> <?php echo $first_name; echo ' '.$last_name; ?> </strong></h5>
+      </div>
+      <div><br><br></div>
+      <div class="row">
+        <form class="col s12" action="modificarUsuario.php" method="POST" enctype="multipart/form-data">
+            <fieldset>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="Nombre(s)" id="first_name" name="first_name" value="<?php echo $first_name; ?>" type="text" class="validate" required>
+                  <label for="first_name">Nombre:  </label>
+                </div>
+                <div class="input-field col s6">
+                  <input placeholder="Apellido(s)" id="last_name" name="last_name" value="<?php echo $last_name; ?>" type="text" class="validate" required>
+                  <label for="last_name">Apellido(s);   </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s4">
+                  <input placeholder="Calle y número" id="calle_numero" name="calle_numero" value="<?php echo $calle_numero; ?>" type="text" class="validate" required>
+                  <label for="calle_numero">Calle y número:   </label>
+                </div>
+                <div class="input-field col s4">
+                  <input placeholder="Colonia" id="colonia" name="colonia" value="<?php echo $colonia; ?>" type="text" class="validate" required>
+                  <label for="colonia">Colonia:   </label>
+                </div>
+                <div class="input-field col s4">
+                      <select id="municipio_empleado" name="municipio">
+                            <option value="" disabled selected>Elige una opción</option>
+                            <option value="Amealco" <?php if(($usuario["municipio"])=="Amealco"){echo "selected";} ?>>Amealco</option>
+                            <option value="Pinal de Amoles" <?php if(($usuario["municipio"])=="Pinal de Amoles"){echo "selected";} ?>>Pinal de Amoles</option>
+                            <option value="Arroyo Seco" <?php if(($usuario["municipio"])=="Arroyo Seco"){echo "selected";} ?>>Arroyo Seco</option>
+                            <option value="Cadereyta"<?php if(($usuario["municipio"])=="Cadereyta"){echo "selected";} ?>>Cadereyta</option>
+                            <option value="El pueblito" <?php if(($usuario["municipio"])=="El Pueblito"){echo "selected";} ?>>El pueblito</option>
+                            <option value="Ezequiel Montes" <?php if(($usuario["municipio"])=="Ezequiel Montes"){echo "selected";} ?>>Ezequiel Montes</option>
+                            <option value="Huimilpan" <?php if(($usuario["municipio"])=="Amealco"){echo "selected";} ?>>Huimilpan</option>
+                            <option value="Jalpan de Serra" <?php if(($usuario["municipio"])=="Jalpan de Serra"){echo "selected";} ?>>Jalpan de Serra</option>
+                            <option value="Landa de Matamoros" <?php if(($usuario["municipio"])=="Landa de Matamoros"){echo "selected";} ?>>Landa de Matamoros</option>
+                            <option value="El Marqués"<?php if(($usuario["municipio"])=="El Marqués"){echo "selected";} ?>>El Marqués</option>
+                            <option value="Pedro Escobedo" <?php if(($usuario["municipio"])=="Pedro Escobedo"){echo "selected";} ?>>Pedro Escobedo</option>
+                            <option value="Peñamiller" <?php if(($usuario["municipio"])=="Peñamiller"){echo "selected";} ?>>Peñamiller</option>
+                            <option value="Querétaro" <?php if(($usuario["municipio"])=="Querétaro"){echo "selected";} ?>>Querétaro</option>
+                            <option value="San Joaquín" <?php if(($usuario["municipio"])=="San Joaquín"){echo "selected";} ?>>San Joaquín</option>
+                            <option value="San Juan del Río" <?php if(($usuario["municipio"])=="San Juan del Río"){echo "selected";} ?>>San Juan del Río</option>
+                            <option value="Tequisquiapan" <?php if(($usuario["municipio"])=="Tequisquiapan"){echo "selected";} ?>>Tequisquiapan</option>
+                            <option value="Tolimán" <?php if(($usuario["municipio"])=="Tolimán"){echo "selected";} ?>>Tolimán</option>
+                            <option value="Colón" <?php if(($usuario["municipio"])=="Colón"){echo "selected";} ?>>Colón</option>
+                        </select>
+                    <label>Municipio</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="Código postal" id="codigo_p" name="codigo_p" value="<?php echo $codigo_p; ?>" type="text" class="validate" required>
+                  <label for="codigo_p">Código postal:   </label>
+                </div>
+                <div class="input-field col s6">
+                      Fecha de nacimiento:
+                       <input value='<?php echo $usuario["fecha_nacimiento"]; ?>' required type="date" class="datepicker" id="fecha_nac" name="fecha_nac"  >
+                  <label for="fecha_nac">  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="Teléfono" id="icon_telephone" name="icon_telephone" value="<?php echo $tel_casa; ?>" type="tel" class="validate" required>
+                  <label for="icon_telephone">   </label>
+                </div>
+                <div class="input-field col s6">
+                  <input placeholder="Celular" id="celular" name="celular" value="<?php echo $celular; ?>" type="tel" class="validate" required>
+                  <label for="celular">   </label>
+                </div>
+              </div>
+            </fieldset>
+            <div><br><br></div>
+            <div class="administrativo">
+                <h5><strong>Cuenta de Usuario </strong></h5>
+            </div>
+            <div><br><br></div>
+            <fieldset>       
+            <div class="row">
+              <div class="input-field col s6">
+                <select required name="tipo_empleado">
+                  <option value="1" <?php if(($usuario["ID_ROL"])=="1"){echo "selected";} ?>>Profesor</option>
+                  <option value="2" <?php if(($usuario["ID_ROL"])=="2"){echo "selected";} ?>>Administrativo</option>
+                  <option value="3" <?php if(($usuario["ID_ROL"])=="3"){echo "selected";} ?>>Administrador</option>
+                </select>
+                <label>Tipo de Empleado: </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Nombre de Usuario" id="email" name="email" value="<?php echo $email; ?>" type="email" class="validate" autocomplete="off" required>
+                <label for="email">Nombre de usuario (email)</label>
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="contraseña" id="password" name="password" value="<?php echo $password; ?>" type="password" class="validate" autocomplete="off" required>
+                <label for="password">Password</label>
+              </div>
+            </div>  
+            </fieldset>
+              <input hidden id="id" name="id" value="<?php echo $id; ?>"  required>
+            <div><br><br></div>
+            <div align="right">
+                  <button class="btn-large blueFim enviar_y_guardar right" type="submit" name="action"> <i class="material-icons right">send</i> Modificar Usuario
+                  </button>
+            </div>        
+          </form>
+      </div>
+    </div>       
+    <!-- ends content -->   

@@ -1,0 +1,56 @@
+<div class="content administrativo">
+    <h3> Modificar Información Pública </h3>
+   <div class="row">
+              <form class="col s12" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
+                <fieldset>
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input disabled id="nombre" name="nombre" value="<?php echo $nombre; ?>">
+                    </div>
+                  </div>
+              
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="informacion" name="informacion">  </textarea>
+                      <label for="informacion">Información a modificar:</label>
+                    </div>
+                  </div>
+
+                  <div class="input-field"  hidden>
+                    <input id='id' name='id' value='<?php echo $id;?>' readonly>
+                  </div>
+                  
+                </fieldset>
+                <br>
+                  <button class="btn-large blueFim enviar_y_guardar right" type="submit" name="action"> 
+                    <i class="material-icons right">send</i> Modificar Información
+                  </button>
+            </form>
+          </div>
+      </div>       
+</div>
+    
+    <script type="text/javascript"> CKEDITOR.replace( 'informacion', {
+          on: {
+              instanceReady: function( ev ) {
+                var dtd = CKEDITOR.dtd;
+                for ( var e in CKEDITOR.tools.extend( {}, 
+                    dtd.$block, 
+                    dtd.$listItem, 
+                    dtd.$tableContent ) 
+                ) {
+                      this.dataProcessor.writer.setRules( e, {
+                      indent: false,
+                      breakBeforeOpen: false,
+                      breakAfterOpen: false,
+                      breakBeforeClose: false,
+                      breakAfterClose: false
+                  });
+                }
+              }
+          }
+      });
+    </script>
+    
+    <script type="text/javascript"> CKEDITOR.instances.informacion.setData(value='<?php echo $informacion; ?>');</script>
+

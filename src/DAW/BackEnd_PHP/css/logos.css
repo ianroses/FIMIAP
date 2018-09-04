@@ -1,0 +1,22 @@
+
+#logoscp, #logos {
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    #logos {
+         display: block;
+    }
+    #logoscp {
+         display: none;
+    }
+}
+@media screen and (min-width: 769px) {
+    #logoscp {
+         display: block;
+    }
+    #logos {
+         display: none;
+    }
+}
+

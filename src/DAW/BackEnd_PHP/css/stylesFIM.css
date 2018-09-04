@@ -1,0 +1,239 @@
+
+#sidenav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 996;
+  will-change: opacity;
+}
+
+.pinkFim {
+    background-color: #E73157 !important;
+}
+
+.pinkFim-opa{
+    background-color: rgba(231,49,87,.4) !important;
+    color: rgba(255,255,255,1);
+}
+
+.pinkFim-opagrey{
+    background-color: rgba(231,49,87,.4) !important;
+    color: rgba(255,255,255,1);
+}
+
+
+.pinkFim.lighten {
+    background-color: #E45C80 !important;
+}
+
+.pinkFim.lighten-2 {
+    background-color: #F18EAC !important;
+}
+
+.blueFim {
+    background-color: #2355A2 !important;
+}
+
+.greenFim {
+    background-color: #2B8F49 !important;
+    opacity: .95;
+}
+
+.pinkFim-text {
+    color: #E73157 !important;
+}
+
+.pinkFim-text.lighten{
+    color: #E45C80 !important;
+}
+
+.pinkFim-text.lighten-2{
+    color: #F18EAC !important;
+}
+
+.blueFim-text {
+    font-size: 4em;
+    color: #2355A2 !important;
+}
+
+.blueFim-text strong {
+    color: #E73157 !important;
+}
+
+.greenFim-text {
+    color: #2B8F49 !important;
+}
+.greenFim-text strong {
+    color: #EF4065 !important;
+}
+
+
+.navFim {
+    
+}
+
+.vert-divFim {
+    border-left: 2px;
+    border-left-color: #fff;
+}
+
+.fim-z {
+    z-index: 998 !important;
+}
+
+*{
+    /*font-family: 'Raleway', sans-serif;*/
+font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+/*Iniciar sesion*/
+    form.iniciarSesion {
+      display: flex;
+      min-height: 0;
+      flex-direction: column;
+    }
+
+    main.iniciarSesion {
+    }
+
+    body.iniciarSesion {
+      background-image: url(../Images/fimLogo.jpg);
+    }
+
+    .input-field input[type=date]:focus + label,
+    .input-field input[type=text]:focus + label,
+    .input-field input[type=email]:focus + label,
+    .input-field input[type=password]:focus + label + icon {
+      color: #e91e63;
+    }
+
+    .input-field input[type=date]:focus,
+    .input-field input[type=text]:focus,
+    .input-field input[type=email]:focus,
+    .input-field input[type=password]:focus {
+      border-bottom: 2px solid #e91e63;
+      box-shadow: none;
+    }
+    
+    #contacto_bottom{min-width: 900px;background-color: #fffdf4;}
+	#contacto_bottom_wrapper{width: 95%;margin: 0 auto;max-width: 1200px;min-height: 600px;text-align: left;}
+	#contacto_bottom_wrapper h2{font-size: 200%;text-transform: uppercase;text-align: left;font-weight: bold;margin: 0 auto;padding: 20px 0;border-bottom: 1px solid #666;}
+	#contacto_hospitales{width: 48%;float: left;}
+    .map_container{margin: 20px 0;}
+	.map_container address{width: 45%;float: right;text-align: left;font-size: 110%;}
+	.map_container h3{font-size: 130%;font-weight: bold;text-transform: uppercase;margin-bottom: 10px;}
+	#map{width: 50%;margin: 0 auto 0 0;height: 180px;}
+	#map2{width: 50%;margin: 0 auto 0 0;height: 180px;}
+
+/*Fin iniciar sesion*/
+
+/* Sticky Footer */
+
+  .page-flexbox-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+    padding-left: 0 !important;
+  }
+
+
+  .carousel {
+      vertical-align: middle;
+  }
+
+  .slider .slides li img {
+    background-size:100% auto;
+    background-repeat: no-repeat;
+    }
+    
+
+/*ICONOS Materialize*/
+
+icon-pink {
+    color: #E73157 !important;
+}
+
+.modalStatic { 
+    width: 60% !important;
+    height: 75% !important;
+}
+.listaSeleccionable {
+    cursor:pointer;
+}
+.listaSeleccionable li:hover {
+    background-color: #E7E7E7;
+}
+
+#msgError {
+    color:red;
+}
+
+.square {
+    position:relative;
+    float:left;
+    width:23%;
+    padding-bottom:23%;
+    margin:1%;
+    overflow:hidden;
+}
+
+.square:hover {
+    background-color:#E7E7E7;
+}
+
+.imgContent {
+    position:absolute;
+    height:98%;
+    width:98%;
+    margin:1%;
+    vertical-align:middle;
+}
+
+.imgContent img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.rs {
+    height:auto;
+    width:auto;
+    max-width:98%;
+    max-height:98%;
+}
+
+.table{
+    display:table;
+    height:100%;
+    width:100%;
+}
+.table-cell{
+    display:table-cell;
+    vertical-align:middle;
+    height:100%;
+    width:100%;
+}
+
+.addIcon{
+    cursor:pointer;
+    position:absolute;
+    height:50%;
+    width:50%;
+    margin:25%;
+    vertical-align:middle;
+}
+
+.allScreen {
+    width: 98% !important;
+    height: 98% !important;
+}
+

@@ -1,0 +1,55 @@
+<br><br>  <p style= "text-align: right; color: red;     margin-right: 10%;" ><a href="logout.php"><img src="images/lo.png" height=50px width=auto ></img><br>Log Out</a>
+                     </a> </p>
+                     
+
+
+<h1>Codigo de Acceso</h1>
+
+   <div class="row"> <br>
+     <p>ingresa el código de acceso</p><br>
+    <form class="col s12" action="reg.php" method="POST" enctype="multipart/form-data">
+      <div class="row">
+        <div class="input-field col s6">
+                      <label for="icon_prefix">Código:</label><br><br>
+
+          <input id="userInput" type="text" name="numeros" class="validate" onkeyup="sendRequest()" required>
+          <div id="ajaxResponse"></div><br><br>
+        </div>
+       
+          
+   
+   
+    
+     
+      <br>
+      <br><br>
+          <input class="btn waves-effect waves-light" type="submit" name="action" value="Enviar">
+       </form></div>
+       </article>
+      
+      
+      
+      <h1>Reportes</h1>
+      
+      
+
+   <div class="row"> <br>
+    
+    
+    
+    <?php
+
+
+include("reportes.php");
+    
+?>
+
+    
+    
+    
+    
+    
+          
+   
+  
+       

@@ -1,0 +1,113 @@
+    <!-- starts content  -->
+    <div class="content administrativo"> 
+      <div class="administrativo">
+          <h5><strong>Registrar usuario </strong></h5>
+      </div>
+      <div><br><br></div>
+      <div class="row">
+        <form class="col s12" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
+            <fieldset>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="Nombre(s)" id="first_name" name="first_name" type="text" class="validate" required>
+                  <label for="first_name">   </label>
+                </div>
+                <div class="input-field col s6">
+                  <input placeholder="Apellido(s)" id="last_name" name="last_name" type="text" class="validate" required>
+                  <label for="last_name">   </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s4">
+                  <input placeholder="Calle y número" id="calle_numero" name="calle_numero" type="text" class="validate" required>
+                  <label for="calle_numero">   </label>
+                </div>
+                <div class="input-field col s4">
+                  <input placeholder="Colonia" id="colonia" name="colonia" type="text" class="validate" required>
+                  <label for="colonia">   </label>
+                </div>
+                <div class="input-field col s4">
+                  <select id="municipio_empleado" name="municipio_empleado" required>
+                        <option value="" disabled selected>Elige una opción</option>
+                        <option value="Amealco">Amealco</option>
+                        <option value="Pinal de Amoles">Pinal de Amoles</option>
+                        <option value="Arroyo Seco">Arroyo Seco</option>
+                        <option value="Cadereyta">Cadereyta</option>
+                        <option value="El pueblito">El pueblito</option>
+                        <option value="Ezequiel Montes">Ezequiel Montes</option>
+                        <option value="Huimilpan">Huimilpan</option>
+                        <option value="Jalpan de Serra">Jalpan de Serra</option>
+                        <option value="Landa de Matamoros">Landa de Matamoros</option>
+                        <option value="El Marqués">El Marqués</option>
+                        <option value="Pedro Escobedo">Pedro Escobedo</option>
+                        <option value="Peñamiller">Peñamiller</option>
+                        <option value="Querétaro">Querétaro</option>
+                        <option value="San Joaquín">San Joaquín</option>
+                        <option value="San Juan del Río">San Juan del Río</option>
+                        <option value="Tequisquiapan">Tequisquiapan</option>
+                        <option value="Tolimán">Tolimán</option>
+                        <option value="Colón">Colón</option>
+                    </select>
+                    <label>Municipio</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="Código postal" id="codigo_p" name="codigo_p" type="text" class="validate" required>
+                  <label for="codigo_p">   </label>
+                </div>
+                <div class="input-field col s6">
+                      Fecha de nacimiento:
+                      <input type="date" class="datepicker" id="fecha_nac" name="fecha_nac" required>
+                  <label for="fecha_nac">  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s4">
+                  <input placeholder="Teléfono" id="icon_telephone" name="icon_telephone" type="tel" class="validate" required>
+                  <label for="icon_telephone">   </label>
+                </div>
+                <div class="input-field col s4">
+                  <input placeholder="Celular" id="celular" name="celular" type="tel" class="validate" required>
+                  <label for="celular">   </label>
+                </div>
+              </div>
+            </fieldset>
+            <div><br><br></div>
+            <div class="administrativo">
+                <h5><strong>Cuenta de Usuario </strong></h5>
+            </div>
+            <div><br><br></div>
+            <fieldset>       
+            <div class="row">
+              <div class="input-field col s6">
+                <select required name="tipo_empleado">
+                  <option value="" disabled selected>Elige una opción</option>
+                  <option value="1">Profesor</option>
+                  <option value="2">Administrativo</option>
+                  <option value="3">Administrador</option>
+                </select>
+                <label>Tipo de Empleado: </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Nombre de Usuario" id="email" name="email" type="email" class="validate" autocomplete="off" required>
+                <label for="email">Nombre de usuario (email)</label>
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="contraseña" id="password" name="password" type="password" class="validate" autocomplete="off" required>
+                <label for="password">Password</label>
+              </div>
+            </div>  
+            </fieldset>
+            <div><br><br></div>
+            <div align="right">
+                  <button class="btn-large blueFim enviar_y_guardar right" type="submit" name="action"> 
+                    <i class="material-icons right">send</i> Guardar Usuario
+                  </button>
+            </div>
+        </form>
+      </div>
+    </div>       
+    <!-- ends content -->   

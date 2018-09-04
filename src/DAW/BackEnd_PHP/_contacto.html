@@ -1,0 +1,64 @@
+<div class="row">
+
+		<div class="col s12 m12 l6 right">
+			<h2 class="blueFim-text">Comentarios</h2>
+								
+			<form name="contactoFim" action="mail.php" method="POST">
+				<tr>
+					<div class="input-field col s12">
+						<i class="material-icons prefix">account_circle</i>
+						<input id="txtName" name="txtName" type="text" required>
+						<label for="txtName">Nombre Completo</label>
+					</div>
+				</tr>
+				
+				<tr class="row">
+					<div class="input-field col s6">
+					    <i class="material-icons prefix">email</i>
+					   	<input id="txtMail" name="txtMail" type="email" class="validate" for="email" data-error="wrong" data-success="right" required>
+						<label for="txtMail">Correo Electr&oacute;nico</label>
+					</div>
+					
+					<div class="input-field col s6">
+	          			<i class="material-icons prefix">phone</i>	
+						<input id="txtTelefono" name="txtTelefono" type="tel" class="validate" for="tel" data-error="wrong" data-success="right" required>
+						<label for="txtTelefono">Telefono</label>
+					</div>
+					
+				</tr>
+				
+				<tr>
+				<div class="input-field col s12">
+          			<i class="material-icons prefix">message</i>	
+					<input id="comentarios" name="comentarios" type="text" class="validate" required>
+					<label for="comentarios">Mensaje</label>
+				</div>
+				</tr>
+				<div class="col s12">
+					<p></p>
+				</div>
+				<div class="center">
+				<br/>
+					  <button class="btn waves-effect waves-light blueFim white-text" type="submit" name="btnSend" id="btnSend" >Enviar
+					    <i class="material-icons right">send</i>
+					  </button>
+				</div>
+			</form>
+		</div>
+			
+		<div class="col s12 m12 l6 left">
+			
+			<h2  class="blueFim-text">Direcci&oacute;n</h2>
+			<div class="center">
+				<address class="">
+					<strong>Calle Vicente Guerrero #10</strong><br />
+					Colonia Centro, C.P. 76000 Santiago de Querétaro, Qro.<br />
+					Tel. (442) 212 1756
+				</address>
+				<br/>
+			</div>
+			<div class="center">
+				<iframe width="80%" height="250" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJvxu47NVa04URnFOA4xyaLVM&key=AIzaSyBIRYnSEoPejEaEUh9RNxmRnqq6fBXXQWU" allowfullscreen></iframe>
+			</div>
+		</div>
+</div>
