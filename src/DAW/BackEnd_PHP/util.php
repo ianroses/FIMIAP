@@ -1969,7 +1969,7 @@
            "Talleres" => "taller.php",
            "Noticia" => "modificareliminar_Noticia.php",
            "Galer&iacute;a de Im&aacute;genes" => "imagenesGaleria.php",
-           "Gastos" => "gastos.php",
+           //"Gastos" => "gastos.php",
            "Usuarios" => "consultaUsuario.php",
            "Donaciones" => "https://www.paypal.com/mx/webapps/mpp/home",
            "Informaci&oacute;n Institucional" => "consultaInformacion.php",
